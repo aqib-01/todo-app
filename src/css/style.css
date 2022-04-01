@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+.wrapper {
+  max-width: 600px;
+  width: 90%;
+  @apply mx-auto;
+}
+
+button,
+input {
+  @apply font-josefin;
+}
+
+body {
+  @apply bg-l-very-light-gray font-josefin dark:bg-d-very-dark-blue;
+}
+
+header h2 {
+  letter-spacing: 10px;
+}
+
+.todo-input-sect {
+  @apply bg-white shadow-lg dark:bg-d-very-dark-desat-blue mt-12 px-6 py-3 flex items-center rounded-md;
+}
+
+.todo-input-sect .text-input {
+  @apply flex-1;
+}
+
+.todo-input-sect .text-input input {
+  @apply w-full border-none outline-none py-1 text-lg 
+      font-semibold  text-l-very-dark-grayish-blue
+       placeholder:font-normal 
+       dark:placeholder:text-d-very-dark-grayish-blue
+        dark:bg-d-very-dark-desat-blue dark:text-l-dark-grayish-blue;
+}
+
+.checkbox-input {
+  @apply mr-4 flex justify-center items-center;
+}
+
+.checkbox-input input {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 23px;
+  height: 23px;
+  @apply border-2 border-l-light-grayish-blue
+       rounded-full cursor-pointer;
+}
+
+.checkbox-input input:checked {
+  @apply bg-gradient-to-br from-check-bg-start 
+        to-check-bg-end;
+}
+
+.checkbox-input input:checked::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../../public/images/icon-check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-input input:hover {
+  @apply border-bright-blue;
+}
+
+.active-todo-type {
+  @apply text-bright-blue;
+}
+
+.todo-completed p {
+  @apply line-through text-l-light-grayish-blue;
+}
+/*# sourceMappingURL=style.css.map */
